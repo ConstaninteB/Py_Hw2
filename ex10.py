@@ -4,17 +4,36 @@
 # 5 -> 1 0 1 1 0
 # 2
 
-from random import randint
-length = int(input("Введите количество монет: "))
-random_list = []
-eagls_coin = tails_coin = 0
-for i in range(length):
-    random_list.append(randint(0, 1))
-    if i == 0:
-        tails_coin += 1
-    if i == 1:
-        eagls_coin += 1
-if eagls_coin < tails_coin:
-    print(eagls_coin)
-else: print(tails_coin)                    
+# from random import randint
+# length = int(input("Введите количество монет: "))
+# random_list = []
+# eagls_coin = tails_coin = 0
+# for i in range(length):
+#     random_list.append(randint(0, 1))
+#     if i == 0:
+#         tails_coin += 1
+#     if i == 1:
+#         eagls_coin += 1
+# if eagls_coin < tails_coin:
+#     print(eagls_coin)
+# else: print(tails_coin)                    
  
+
+# Задача 12: Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница.
+# Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000), 
+# а Катя должна их отгадать. Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P.
+#  Помогите Кате отгадать задуманные Петей числа.
+# 4 4 -> 2 2
+# 5 6 -> 2 3
+
+a = int(input("Введите сумму чисел: "))
+b = int(input("Введите произведение чисел: "))
+flag = True
+for i in range (1, a + 1):
+    if flag == False:
+        break
+    for j in range (1, b + 1):
+        if (i + j == a) and (i * j == b):
+            print(i, j)
+            flag = False
+            break
