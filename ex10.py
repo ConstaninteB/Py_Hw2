@@ -26,14 +26,23 @@
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 
-a = int(input("Введите сумму чисел: "))
-b = int(input("Введите произведение чисел: "))
-flag = True
-for i in range (1, a + 1):
-    if flag == False:
-        break
-    for j in range (1, b + 1):
-        if (i + j == a) and (i * j == b):
-            print(i, j)
-            flag = False
-            break
+# a = int(input("Введите сумму чисел: "))
+# b = int(input("Введите произведение чисел: "))
+# flag = True
+# for i in range (1, a + 1):
+#     if flag == False:
+#         break
+#     for j in range (1, b + 1):
+#         if (i + j == a) and (i * j == b):
+#             print(i, j)
+#             flag = False
+#             break
+
+# Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+# 10 -> 1 2 4 8
+
+Num_start = int(input("Введите число: "))
+i = 1
+while i <= Num_start:
+    print(i)
+    i *= 2
